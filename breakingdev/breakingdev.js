@@ -1,19 +1,32 @@
+
+devers = new Meteor.Collection("devers");
+
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
-  });
+Template.devReg.events({
+  'submit .addDevForm' : function (event) {
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
+
+    event.preventDefault();
+    
+
+    var name = event.target.name.value;
+
+    
+    devers.insert({
+      name: name,
+      createdAt: new Date() // current time
+    });
+    
+     // Clear form
+    event.target.name.value = "";
+
+  }
+
+});
+
 }
 
 if (Meteor.isServer) {

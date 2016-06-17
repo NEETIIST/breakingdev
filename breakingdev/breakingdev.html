@@ -6,9 +6,19 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
+
+  {{> devReg}}  
 </body>
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+
+<template name="devReg">
+<form class="addDevForm">
+  <input type="text" name="name" >
+  <button type="submit" class="form-control">Submeter</button>
+ </form>
 </template>
