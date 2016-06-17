@@ -13,15 +13,21 @@ Template.devReg.events({
     
 
     var name = event.target.name.value;
+    var age = event.target.age.value;
+    var city = event.target.city.value;
 
     
     devers.insert({
       name: name,
+      age: age,
+      city: city,
       createdAt: new Date() // current time
     });
     
      // Clear form
     event.target.name.value = "";
+    event.target.age.value = "";
+    event.target.city.value = "";
 
   }
 
@@ -34,3 +40,4 @@ if (Meteor.isServer) {
     // code to run on server at startup
   });
 }
+
