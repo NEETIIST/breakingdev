@@ -3,12 +3,12 @@
     "github": {
       "version": "0.1.8",
       "resolved": "https://registry.npmjs.org/github/-/github-0.1.8.tgz",
-      "from": "github@0.1.8"
+      "from": "https://registry.npmjs.org/github/-/github-0.1.8.tgz"
     },
     "redis": {
       "version": "0.8.2",
       "resolved": "https://registry.npmjs.org/redis/-/redis-0.8.2.tgz",
-      "from": "redis@0.8.2"
+      "from": "https://registry.npmjs.org/redis/-/redis-0.8.2.tgz"
     }
   }
 }

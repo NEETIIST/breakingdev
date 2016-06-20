@@ -1,1 +1,80 @@
 /* CSS declarations go here */
+
+@import url(https://fonts.googleapis.com/css?family=Exo+2:300,500,700);
+
+body { 
+	padding-top: 70px; 
+	font-family: 'Exo 2', sans-serif;	/* ESCOLHER TIPO DE LETRA */
+}
+
+
+/* NAVBAR */
+
+#navbar_breaking.navbar-default .navbar-brand {
+    color: rgba(255, 255, 90, 1);
+    border: 0.5em solid #1c1c1c ;
+}
+#navbar_breaking.navbar-default {
+    font-size: 1.2em;
+    font-weight: 400 ;
+    background-color: rgba(28, 28, 28, 1);
+}
+#navbar_breaking.navbar-default .navbar-right {
+    margin-right: 1em ;
+}
+#navbar_breaking.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(28, 28, 28, 1);
+ 	border: 0.5em solid #1c1c1c ;  
+ 	border-width: 0.5em 0px 0.5em 0px;
+}
+#navbar_breaking.navbar-default .navbar-nav>li>a:hover,
+#navbar_breaking.navbar-default .navbar-nav>li>a:focus {
+    background-color: rgba(28, 28, 28, 1);
+    border-bottom: 0.5em solid #ffff5a ;
+}
+#navbar_breaking.navbar-default .navbar-nav>.active>a,
+#navbar_breaking.navbar-default .navbar-nav>.active>a:hover,
+#navbar_breaking.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(255, 255, 90, 1);
+    background-color: rgba(28, 28, 28, 1);
+}
+#navbar_breaking.navbar-default .navbar-toggle {
+    border-color: #1c1c1c;
+}
+#navbar_breaking.navbar-default .navbar-toggle:hover,
+#navbar_breaking.navbar-default .navbar-toggle:focus {
+    background-color: #1c1c1c;
+}
+#navbar_breaking.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+#navbar_breaking.navbar-default .navbar-toggle:hover .icon-bar,
+#navbar_breaking.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: white;
+}
+
+#logotopleft
+{
+	width: 18em ;
+	height: auto ;
+	padding-top: 0.75em ;
+}
+
+@media (max-width: 768px) {
+  #logotopleft {
+    width: auto;
+    height: 2em;
+    padding-top: 0.75em ;
+  }
+}
+
+/* INDEX PAGE */
+
+#splash
+{
+    background-color: #1c1c1c;
+    
+}
+
+

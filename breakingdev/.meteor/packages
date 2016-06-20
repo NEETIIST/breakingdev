@@ -23,3 +23,5 @@ standard-minifier-js
 
 npm-container
 meteorhacks:npm
+iron:router
+twbs:bootstrap

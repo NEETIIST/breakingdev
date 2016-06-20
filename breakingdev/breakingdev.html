@@ -1,20 +1,57 @@
+<!-- BreakingDev website developed by NEETI - Filipe Fernandes & Tomás Jacob -->
+
 <head>
-  <title>breakingdev</title>
+  
+  <!-- bootstrap starters -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BreakingDev</title>
+
+  <!-- Bootstrap -->
+  <link href="packages/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+  <!-- NAVBAR -->
+  <div id="navbar_breaking" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <a class="pull-left" href="#"><img id="logotopleft" src="logotopleft.png"></a>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-menubuilder">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
 
-  {{> devReg}}  
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="packages/js/bootstrap.min.js"></script>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="bootstrap">
+  <button type="button" class="btn btn-success">Success</button>
 </template>
-
 
 <template name="devReg">
 <form class="addDevForm">
@@ -23,4 +60,8 @@
   <input type="text" name="city" >
   <button type="submit" class="form-control">Submeter</button>
  </form>
+</template>
+
+<template name="home">
+  <p>HOME</p>
 </template>

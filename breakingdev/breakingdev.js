@@ -41,3 +41,17 @@ if (Meteor.isServer) {
   });
 }
 
+// Iron Router
+
+
+Router.route('/', function () {
+  this.render("index");
+});
+
+Router.route('/boot', function () {
+  this.render('bootstrap');
+});
+
+Router.route('/items', function () {
+  this.render('home');
+});
