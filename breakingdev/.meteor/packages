@@ -25,3 +25,5 @@ npm-container
 meteorhacks:npm
 iron:router
 twbs:bootstrap
+email
+check
