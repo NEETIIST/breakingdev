@@ -166,6 +166,8 @@ h5
 
 .whitecontainer
 {
+    color:  #1c1c1c ;
+    position: relative ;
     background-color: #ffffff;
     width: 100% ;
     height: auto ;
@@ -199,6 +201,37 @@ h5
     {
         width: 12em ;
         height: 12em ;   
+    }
+}
+
+.chalicon
+{
+    width: 12em ;
+    height: auto ;
+}
+@media (max-width: 480px)
+{
+    .chalicon
+    {
+        width: 12em ;
+        height: auto ;
+        margin: 0 auto ;
+    }
+}
+
+.sponsorlogo
+{
+    width: 20em ;
+    height: auto ;
+}
+
+@media (max-width: 480px)
+{
+    .sponsorlogo
+    {
+        width: 12em ;
+        height: auto ;   
+        margin: 0 auto ;
     }
 }
 
@@ -253,6 +286,17 @@ h5
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
   box-shadow: -4px 6px 3px 0.8px rgba(0, 0, 0, 0.35);
   border-color: white ;
+}
+
+.hvr-grey {
+  filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+  filter: gray; /* IE5+ */
+  -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+  -webkit-transition: all .5s ease-in-out;
+}
+.hvr-grey:hover, .hvr-grey:focus, .hvr-grey:active {
+  filter: none;
+  -webkit-filter: grayscale(0);
 }
 
 .hvr-grow {
