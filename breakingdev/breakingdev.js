@@ -3,9 +3,24 @@ devers = new Meteor.Collection("devers");
 
 
 
+
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
+
+
+  Template.options.events({
+  "click #infolink": function() { 
+    scrollFunction('#info');
+  },
+
+    "click #mainlink": function() { 
+    scrollFunction('#main');
+  },
+
+});
+
+  
 
 Template.devReg.events({
   'submit .addDevForm' : function (event) {
@@ -98,6 +113,11 @@ Meteor.methods({
   });
 }
 
+var scrollFunction = function(idstring) {
+  $('html, body').animate({
+    scrollTop: $(idstring).offset().top
+  }, 1000);
+};
 
 
 // Iron Router

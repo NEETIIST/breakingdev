@@ -21,22 +21,23 @@
 
 </head>
 
-<body>
-
+<body id="main">
+  {{>options}}
+</body>
+<template name="options">
   <!-- NAVBAR -->
   <div id="navbar_breaking" class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-      <a class="pull-left" href="#"><img id="logotopleft" src="logotopleft.png"></a>
+      <a id="mainlink" class="pull-left" ><img id="logotopleft" src="logotopleft.png"></a>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
           </button>
         </div>
         <div class="collapse navbar-collapse navbar-menubuilder">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">Home</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/about-us">About Us</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><a id="infolink">Informações</a></li>
+            <li><a href="/signup">Inscrições</a></li>
+            <li><a href="/contact">Contactos</a></li>
           </ul>
         </div>
     </div>
@@ -48,7 +49,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="packages/js/bootstrap.min.js"></script>
-</body>
+</template>
+
 
 <template name="bootstrap">
   <button type="button" class="btn btn-success">Success</button>
