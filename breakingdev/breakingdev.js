@@ -114,3 +114,6 @@ Router.route('/boot', function () {
 Router.route('/items', function () {
   this.render('home');
 });
+
+
+/* MODAL IMAGES */
