@@ -53,28 +53,28 @@ Template.devReg.events({
 
 Template.contactUs.events({
 
-  'submit .contactUsForm' : function (event) {
+  'submit .contactoGeralForm' : function (event) {
 
     event.preventDefault();
     
 
     var name = event.target.name.value;
     var mail = event.target.mail.value;
-    var subject = event.target.subject.value;
+    var company = event.target.company.value;
     var data = event.target.data.value;
 
 
     // In your client code: asynchronously send an email
     Meteor.call('sendEmail',
-            'geral@neeti.tecnico.ulisboa.pt',
+            'breakingdev@neeti.tecnico.ulisboa.pt',
             mail,
-            subject,
+            company,
             data);
 
     // Clear form
     event.target.name.value = "";
     event.target.mail.value = "";
-    event.target.subject.value = "";
+    event.target.company.value = "";
     event.target.data.value = "";
 
   }
@@ -94,8 +94,8 @@ if (Meteor.isServer) {
 
 
 Meteor.methods({
-  sendEmail: function (to, from, subject, text) {
-    check([to, from, subject, text], [String]);
+  sendEmail: function (to, from, company, text) {
+    check([to, from, company, text], [String]);
 
     // Let other method calls from the same client start running,
     // without waiting for the email sending to complete.
@@ -104,7 +104,7 @@ Meteor.methods({
     Email.send({
       to: to,
       from: from,
-      subject: subject,
+      company: company,
       text: text
     });
   }
@@ -127,10 +127,6 @@ Router.route('/', function () {
   this.render("index");
 });
 
-Router.route('/boot', function () {
-  this.render('bootstrap');
-});
-
-Router.route('/items', function () {
-  this.render('home');
+Router.route('/contactos', function () {
+  this.render("contacts");
 });
