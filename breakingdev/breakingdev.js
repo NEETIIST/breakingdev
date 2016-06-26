@@ -137,8 +137,11 @@ Template.volunteer.events({
 
     volunteers.insert({
       name: name,
+      mail: mail,
+      phone: phone,
       age: age,
-      city: city,
+      company: company,
+      course: course,
       createdAt: new Date() // current time
     });
 
