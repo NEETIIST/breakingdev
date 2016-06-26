@@ -167,3 +167,7 @@ Router.route('/', function () {
 Router.route('/contactos', function () {
   this.render("contacts");
 });
+
+Router.route('/inscricoes', function () {
+  this.render("insc");
+});
