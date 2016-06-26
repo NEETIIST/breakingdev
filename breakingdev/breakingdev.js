@@ -1,5 +1,6 @@
 
 devers = new Meteor.Collection("devers");
+volunteers = new Meteor.Collection("volunteers");
 
 
 
@@ -112,6 +113,42 @@ Template.contacts.events({
     event.target.mail.value = "";
     event.target.company.value = "";
     event.target.data.value = "";
+
+  }
+
+
+});
+
+
+Template.volunteer.events({
+
+  'submit .voluntarioForm' : function (event) {
+
+    event.preventDefault();
+    
+
+    var name = event.target.name.value;
+    var mail = event.target.mail.value;
+    var phone = event.target.phone.value;
+    var age = event.target.age.value;
+    var company = event.target.company.value;
+    var course = event.target.course.value;
+
+
+    volunteers.insert({
+      name: name,
+      age: age,
+      city: city,
+      createdAt: new Date() // current time
+    });
+
+    // Clear form
+    event.target.name.value = "";
+    event.target.mail.value = "";
+    event.target.phone.value = "";
+    event.target.age.value = "";
+    event.target.company.value = "";
+    event.target.course.value = "";
 
   }
 
