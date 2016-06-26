@@ -87,7 +87,7 @@ Template.devReg.events({
 
 });
 
-Template.contactUs.events({
+Template.contacts.events({
 
   'submit .contactoGeralForm' : function (event) {
 
@@ -126,7 +126,7 @@ if (Meteor.isServer) {
 
 
     //replace xxxxx and yyyyy with gmail username and password
-    process.env.MAIL_URL = "smtp://xxxxx%40gmail.com:yyyyyyy@smtp.gmail.com:465/"
+    process.env.MAIL_URL = "smtp://postmaster%40USER:PASSWORD@smtp.mailgun.org:587";
 
 
 Meteor.methods({
@@ -140,7 +140,7 @@ Meteor.methods({
     Email.send({
       to: to,
       from: from,
-      company: company,
+      subject: company,
       text: text
     });
   }
