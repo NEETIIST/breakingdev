@@ -14,13 +14,49 @@ if (Meteor.isClient) {
     scrollFunction('#info');
   },
 
-    "click #mainlink": function() { 
+  "click #mainlink": function() { 
     scrollFunction('#main');
   },
 
+
+
 });
 
-  
+ Template.index.events({
+
+    "click #dirlink": function() { 
+    scrollFunction('#dir');
+  },
+
+      "click #catlink": function() { 
+    scrollFunction('#cat');
+  },
+
+      "click #prizelink": function() { 
+    scrollFunction('#prize');
+  },
+
+      "click #placelink": function() { 
+    scrollFunction('#place');
+  },
+
+  "click #infolink": function() { 
+    scrollFunction('#info');
+  },
+
+  "click #challengelink": function() { 
+    scrollFunction('#challenge');
+  },
+
+    "click #sponsorlink": function() { 
+    scrollFunction('#sponsor');
+  },
+
+    "click #signuplink": function() { 
+    scrollFunction('#signup');
+  },
+
+  });
 
 Template.devReg.events({
   'submit .addDevForm' : function (event) {
@@ -118,6 +154,7 @@ var scrollFunction = function(idstring) {
     scrollTop: $(idstring).offset().top
   }, 1000);
 };
+
 
 
 // Iron Router
