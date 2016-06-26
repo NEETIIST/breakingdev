@@ -84,6 +84,15 @@ hr{
     padding-right: 1em ;
 }
 
+@media (max-width: 480px)
+{
+  .colpadding_short
+  {
+    padding-left: 2.5em ;
+    padding-right: 2.5em ;
+  }
+}
+
 
 /* NAVBAR */
 
@@ -189,6 +198,15 @@ hr{
   width: 100% ;
   height: 100%;
   top: 0; 
+}
+@media( max-width: 480px )
+{
+  .screencontainer
+  {
+    width: 100% ;
+    height: auto ;
+    position: relative;
+  }
 }
 
 #splashlogo

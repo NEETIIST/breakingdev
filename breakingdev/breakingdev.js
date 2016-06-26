@@ -171,3 +171,7 @@ Router.route('/contactos', function () {
 Router.route('/inscricoes', function () {
   this.render("insc");
 });
+
+Router.route('/voluntarios', function () {
+  this.render("volunteer");
+});
