@@ -83,15 +83,20 @@ hr{
     padding-left: 1em ;
     padding-right: 1em ;
 }
+.colpadding_zero
+{
+    padding-left: 0 ;
+    padding-right: 0 ;
+}
 
-@media (max-width: 480px)
+/*@media (max-width: 480px)
 {
   .colpadding_short
   {
     padding-left: 2.5em ;
     padding-right: 2.5em ;
   }
-}
+} */
 
 
 /* NAVBAR */
